@@ -35,34 +35,22 @@ class SmartShopApp extends StatelessWidget {
       onGenerateRoute: (settings) {
         switch (settings.name) {
           case '/':
-            return MaterialPageRoute(
-              builder: (_) => const SplashScreen(),
-            );
+            return MaterialPageRoute(builder: (_) => const SplashScreen());
           case '/login':
-            return MaterialPageRoute(
-              builder: (_) => const LoginScreen(),
-            );
+            return MaterialPageRoute(builder: (_) => const LoginScreen());
           case '/signup':
-            return MaterialPageRoute(
-              builder: (_) => const SignupScreen(),
-            );
+            return MaterialPageRoute(builder: (_) => const SignupScreen());
           case '/home':
-            return MaterialPageRoute(
-              builder: (_) => const HomeScreen(),
-            );
+            return MaterialPageRoute(builder: (_) => const HomeScreen());
           case '/result':
             final calculation = settings.arguments as ProfitCalculation;
             return MaterialPageRoute(
               builder: (_) => ResultScreen(calculation: calculation),
             );
           case '/history':
-            return MaterialPageRoute(
-              builder: (_) => const HistoryScreen(),
-            );
+            return MaterialPageRoute(builder: (_) => const HistoryScreen());
           default:
-            return MaterialPageRoute(
-              builder: (_) => const SplashScreen(),
-            );
+            return MaterialPageRoute(builder: (_) => const SplashScreen());
         }
       },
     );
