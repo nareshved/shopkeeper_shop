@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Smart Shop Profit Calculator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d432",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102213",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="flex items-center justify-between px-6 py-4 bg-white dark:bg-slate-900 border-b border-primary/10">
+<div class="flex items-center gap-2">
+<div class="bg-primary/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">calculate</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight">Smart Shop</h1>
+</div>
+<button class="text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col max-w-lg mx-auto w-full p-6 space-y-8">
+<section>
+<h2 class="text-2xl font-bold mb-2">Profit Calculator</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Calculate your business margins instantly.</p>
+</section>
+<!-- Form Section -->
+<form class="space-y-6">
+<div class="space-y-4">
+<label class="block">
+<span class="text-sm font-semibold mb-1.5 block">Product Name</span>
+<input class="w-full rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary transition-all p-3.5" placeholder="e.g. Wireless Headphones" type="text"/>
+</label>
+<div class="grid grid-cols-2 gap-4">
+<label class="block">
+<span class="text-sm font-semibold mb-1.5 block">Cost Price (INR)</span>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 font-medium">₹</span>
+<input class="w-full rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary p-3.5 pl-7" placeholder="0.00" type="number"/>
+</div>
+</label>
+<label class="block">
+<span class="text-sm font-semibold mb-1.5 block">Selling Price (INR)</span>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 font-medium">₹</span>
+<input class="w-full rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary p-3.5 pl-7" placeholder="0.00" type="number"/>
+</div>
+</label>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<label class="block">
+<span class="text-sm font-semibold mb-1.5 block">Quantity</span>
+<input class="w-full rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary p-3.5" placeholder="1" type="number"/>
+</label>
+<label class="block">
+<span class="text-sm font-semibold mb-1.5 block">Extra Expenses</span>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 font-medium">₹</span>
+<input class="w-full rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-primary focus:border-primary p-3.5 pl-7" placeholder="0.00" type="number"/>
+</div>
+</label>
+</div>
+</div>
+<!-- Primary Action -->
+<button class="w-full bg-primary hover:bg-primary/90 text-slate-900 font-bold py-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-transform active:scale-95" type="submit">
+<span class="material-symbols-outlined">trending_up</span>
+                Calculate Profit
+            </button>
+</form>
+<!-- Quick Summary Suggestion (Optional UI Enhancement) -->
+<div class="bg-primary/5 border border-primary/10 rounded-xl p-4 flex items-center gap-4">
+<div class="h-12 w-12 bg-primary/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">info</span>
+</div>
+<div>
+<p class="text-sm font-medium">Pro Tip</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Remember to include shipping and packaging in 'Extra Expenses'.</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="sticky bottom-0 w-full bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 py-3 pb-8">
+<div class="max-w-lg mx-auto flex justify-around items-center">
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="bg-primary/10 group-hover:bg-primary/20 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined text-primary font-bold">home</span>
+</div>
+<span class="text-xs font-bold text-primary">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="p-2 rounded-full transition-colors text-slate-400 group-hover:text-primary">
+<span class="material-symbols-outlined">history</span>
+</div>
+<span class="text-xs font-medium text-slate-400 group-hover:text-primary">History</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="p-2 rounded-full transition-colors text-slate-400 group-hover:text-primary">
+<span class="material-symbols-outlined">bar_chart</span>
+</div>
+<span class="text-xs font-medium text-slate-400 group-hover:text-primary">Reports</span>
+</a>
+</div>
+</nav>
+</body></html>

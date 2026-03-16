@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#11d432",
+                "background-light": "#f6f8f6",
+                "background-dark": "#102213",
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display flex items-center justify-center min-h-screen p-4">
+<div class="w-full max-w-md">
+<!-- Brand Identity -->
+<div class="text-center mb-8">
+<div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-xl mb-4">
+<span class="material-icons text-primary text-4xl">trending_up</span>
+</div>
+<h1 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Smart Shop</h1>
+<p class="text-slate-600 dark:text-slate-400 mt-2">Profit Calculator &amp; Analytics</p>
+</div>
+<!-- Main Card -->
+<div class="bg-white dark:bg-slate-900 shadow-xl rounded-xl border border-slate-200/50 dark:border-slate-800/50 p-8">
+<h2 class="text-xl font-semibold text-slate-900 dark:text-slate-100 mb-6 text-center">Welcome Back</h2>
+<form action="#" class="space-y-5" method="POST">
+<!-- Email Field -->
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5" for="email">Email Address</label>
+<div class="relative">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">mail_outline</span>
+<input class="w-full pl-10 pr-4 py-2.5 bg-background-light dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-slate-900 dark:text-slate-100 placeholder-slate-400" id="email" name="email" placeholder="name@company.com" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="password">Password</label>
+<a class="text-sm font-medium text-primary hover:text-primary/80 transition-colors" href="#">Forgot Password?</a>
+</div>
+<div class="relative">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">lock_open</span>
+<input class="w-full pl-10 pr-4 py-2.5 bg-background-light dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-slate-900 dark:text-slate-100 placeholder-slate-400" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<!-- Remember Me -->
+<div class="flex items-center">
+<input class="h-4 w-4 text-primary focus:ring-primary border-slate-300 rounded" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="ml-2 block text-sm text-slate-700 dark:text-slate-300" for="remember-me">
+                        Keep me logged in
+                    </label>
+</div>
+<!-- Login Button -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 rounded-lg transition-all duration-200 shadow-md shadow-primary/20 flex items-center justify-center" type="submit">
+                    Sign In
+                </button>
+</form>
+<!-- Social Login Divider -->
+<div class="relative my-8">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-slate-200 dark:border-slate-800"></div>
+</div>
+<div class="relative flex justify-center text-sm">
+<span class="px-2 bg-white dark:bg-slate-900 text-slate-500">Or continue with</span>
+</div>
+</div>
+<!-- Social Buttons -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center py-2 px-4 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<img alt="Google" class="h-5 w-5 mr-2" data-alt="Google company logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQWWBzNPvrLgO_27b132H8VGIVnIAFp-L2v2Wd5Iacf6Lkq9iypOBaDrUYfwns7N1xy4iP9_GEdScNwqHnd-32aPazKEtqsWP3Pt-WrCM6q_QpD8bt57HkieJ8MSULBp3Ua2WHTbxDnG2F8ezyChpwY2bDpc9-4_DQBSSUceD1SONKLhKS4iaqeN3bQ1ihEdBCO8URNqiw-qfPUgw0q_T47GUluQy_PkLRkpfhhhhJPKT84SwqDvFxnZm-3DvwTXUM1UOK-g3htroW"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Google</span>
+</button>
+<button class="flex items-center justify-center py-2 px-4 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<img alt="Apple" class="h-5 w-5 mr-2" data-alt="Apple company logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwrr7DWI9AEeteSwvdVHd4Yk9MLC4IAx1QdnkVLhz1uZMkcyNYYs2CAoNnOQbVoZFHtz4P9pNvMD9_rRFvyLkyZTE1kzSQo34HsHEdoLLT8IZzJTTEuqWUxiWjbXfL1kP9QJVJ_isENpa9TcCot_-2eGP30DfxBjrtaJu-YdCcYuwPd1fT6JqkJe6DepHXto6ees5QCw-zx7AwY9WXNkm_vRevNcqv9VXhxIFRtapaMglGmQ1JiO6pPjVXihbLRm-S7csILZ4JPmhD"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Apple</span>
+</button>
+</div>
+</div>
+<!-- Signup Link -->
+<p class="mt-8 text-center text-sm text-slate-600 dark:text-slate-400">
+            Don't have an account? 
+            <a class="font-semibold text-primary hover:text-primary/80 transition-colors" href="#">Create account</a>
+</p>
+<!-- Footer -->
+<div class="mt-12 text-center text-xs text-slate-500 dark:text-slate-500 space-x-4">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Contact Support</a>
+</div>
+</div>
+<!-- Background Decorative Element -->
+<div class="fixed top-0 right-0 -z-10 opacity-10 dark:opacity-5">
+<svg fill="none" height="400" viewbox="0 0 400 400" width="400" xmlns="http://www.w3.org/2000/svg">
+<circle cx="300" cy="100" fill="url(#paint0_linear)" r="150"></circle>
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="paint0_linear" x1="150" x2="300" y1="100" y2="250">
+<stop stop-color="#11d432"></stop>
+<stop offset="1" stop-color="#11d432" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+</body></html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#11d432",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102213",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>Calculation History - Smart Shop Profit Calculator</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Header Section -->
+<header class="sticky top-0 z-10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center justify-between p-4 max-w-2xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight">History</h1>
+</div>
+<div class="flex gap-2">
+<button class="p-2 rounded-full hover:bg-primary/10 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 rounded-full hover:bg-primary/10 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Filter Tabs -->
+<div class="px-4 max-w-2xl mx-auto">
+<div class="flex border-b border-primary/10 gap-6">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-4" href="#">
+<p class="text-sm font-bold">All</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-4 hover:text-primary transition-colors" href="#">
+<p class="text-sm font-bold">This Week</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-4 hover:text-primary transition-colors" href="#">
+<p class="text-sm font-bold">This Month</p>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="p-4 max-w-2xl mx-auto pb-24 space-y-4">
+<!-- Summary Stats Card -->
+<div class="bg-primary p-4 rounded-xl shadow-lg shadow-primary/20 text-white flex justify-between items-center">
+<div>
+<p class="text-xs opacity-90 font-medium">Total Profit This Month</p>
+<p class="text-2xl font-bold">₹12,450</p>
+</div>
+<div class="bg-white/20 p-2 rounded-lg">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+</div>
+<div class="pt-2">
+<h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Recent Calculations</h2>
+<div class="space-y-3">
+<!-- Card 1 -->
+<div class="flex items-center justify-between gap-4 rounded-xl bg-white dark:bg-slate-900/50 p-4 border border-primary/5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">shopping_basket</span>
+</div>
+<div class="flex flex-col">
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">20 Oct</p>
+<p class="text-base font-bold leading-tight">Biscuit</p>
+<p class="text-sm font-semibold text-primary">Profit: ₹40</p>
+</div>
+</div>
+<button class="h-10 w-10 flex items-center justify-center rounded-lg bg-background-light dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Card 2 -->
+<div class="flex items-center justify-between gap-4 rounded-xl bg-white dark:bg-slate-900/50 p-4 border border-primary/5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">clean_hands</span>
+</div>
+<div class="flex flex-col">
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">19 Oct</p>
+<p class="text-base font-bold leading-tight">Soap</p>
+<p class="text-sm font-semibold text-primary">Profit: ₹60</p>
+</div>
+</div>
+<button class="h-10 w-10 flex items-center justify-center rounded-lg bg-background-light dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Card 3 -->
+<div class="flex items-center justify-between gap-4 rounded-xl bg-white dark:bg-slate-900/50 p-4 border border-primary/5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">liquor</span>
+</div>
+<div class="flex flex-col">
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">18 Oct</p>
+<p class="text-base font-bold leading-tight">Cooking Oil (1L)</p>
+<p class="text-sm font-semibold text-primary">Profit: ₹120</p>
+</div>
+</div>
+<button class="h-10 w-10 flex items-center justify-center rounded-lg bg-background-light dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Card 4 -->
+<div class="flex items-center justify-between gap-4 rounded-xl bg-white dark:bg-slate-900/50 p-4 border border-primary/5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">flatware</span>
+</div>
+<div class="flex flex-col">
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">17 Oct</p>
+<p class="text-base font-bold leading-tight">Wheat Flour (5kg)</p>
+<p class="text-sm font-semibold text-primary">Profit: ₹210</p>
+</div>
+</div>
+<button class="h-10 w-10 flex items-center justify-center rounded-lg bg-background-light dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Card 5 -->
+<div class="flex items-center justify-between gap-4 rounded-xl bg-white dark:bg-slate-900/50 p-4 border border-primary/5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">kitchen</span>
+</div>
+<div class="flex flex-col">
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">15 Oct</p>
+<p class="text-base font-bold leading-tight">Dairy Milk Pack</p>
+<p class="text-sm font-semibold text-primary">Profit: ₹85</p>
+</div>
+</div>
+<button class="h-10 w-10 flex items-center justify-center rounded-lg bg-background-light dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-20 border-t border-primary/10 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md">
+<div class="flex items-center justify-around px-4 pb-6 pt-2 max-w-2xl mx-auto">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">calculate</span>
+<p class="text-[10px] font-medium">Calculator</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">history</span>
+<p class="text-[10px] font-bold">History</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">insights</span>
+<p class="text-[10px] font-medium">Insights</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<p class="text-[10px] font-medium">Inventory</p>
+</a>
+</div>
+</div>
+</body></html>

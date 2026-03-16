@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Smart Shop Profit Calculator - Splash Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#11d432",
+                "background-light": "#f6f8f6",
+                "background-dark": "#102213",
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden">
+<!-- Logo Section -->
+<div class="flex flex-col items-center gap-6 animate-fade-in">
+<div class="relative flex h-32 w-32 items-center justify-center rounded-xl bg-primary/10 p-4 ring-2 ring-primary/20">
+<div class="relative flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-7xl select-none" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">
+                        calculate
+                    </span>
+<span class="material-symbols-outlined absolute -top-2 -right-2 text-primary text-4xl bg-background-light dark:bg-background-dark rounded-full p-1 border-2 border-primary/30" style="font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 0, 'opsz' 48;">
+                        trending_up
+                    </span>
+</div>
+</div>
+<!-- Title & Slogan -->
+<div class="text-center px-6">
+<h1 class="text-slate-900 dark:text-slate-100 tracking-tight text-4xl font-bold leading-tight pb-2">
+                    Smart Shop<br/>Profit Calculator
+                </h1>
+<p class="text-primary text-base font-medium tracking-wide">
+                    Professional Business Solutions
+                </p>
+</div>
+</div>
+<!-- Footer / Loading Area -->
+<div class="absolute bottom-16 w-full max-w-xs px-8 flex flex-col items-center gap-4">
+<div class="w-full flex flex-col gap-3">
+<div class="flex justify-between items-center px-1">
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium">Initializing modules...</p>
+<p class="text-primary text-sm font-bold">75%</p>
+</div>
+<div class="w-full h-1.5 rounded-full bg-primary/20 overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 75%;"></div>
+</div>
+</div>
+<div class="flex items-center gap-2 text-slate-400 dark:text-slate-600">
+<span class="material-symbols-outlined text-sm">shield_with_heart</span>
+<span class="text-xs uppercase tracking-widest font-semibold">Secure Accounting</span>
+</div>
+</div>
+<!-- Background Decorative Elements -->
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+<!-- Fallback Content for Component Consistency -->
+<div class="hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-white group/design-root overflow-x-hidden">
+<div class="flex items-center bg-white p-4 pb-2 justify-end"></div>
+<div class="@container">
+<div class="@[480px]:px-4 @[480px]:py-3">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-white @[480px]:rounded-lg min-h-80" data-alt="Abstract green digital data pattern representing growth" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDJQUep3t5_kWD48RfPZfcBpH54ctpCPXfxXjb3RX8ncejh4nEyHQ7ueISv6z9mMEj525DVEyYuN0HMPByYM_iXp-6_30OtKuGPPO8qBf71hklJuNGRU6NQT0w60R0zWrTjD9-eCkGDk4JNYCROKY6R6_3Uk_UmhdSm33Pm1cDTXe11OJ09Zc9X5AY__OGfp8p0a2B_LeMARrYxm5Uoj9RPXGIjX2EGBQeFs6jsvJD1OPtVhLW-wadRRpkJqBZZWh0cvmp51HzypLGb");'></div>
+</div>
+</div>
+</div>
+</div>
+</body></html>
